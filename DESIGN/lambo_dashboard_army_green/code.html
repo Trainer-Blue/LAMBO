@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-surface": "#F0F3E8",
+          "secondary-fixed-dim": "#c2caaa",
+          "forest-base": "#282E16",
+          "on-surface-variant": "#D8DFC8",
+          "sage-muted": "#AAB596",
+          "sage-cream": "#F0F3E8",
+          "surface-variant": "#30371A",
+          "outline": "#5D6A37",
+          "on-primary-container": "#1F240F",
+          "forest-deep": "#1D230E",
+          "secondary": "#C2CE9F",
+          "surface-container-low": "#212711",
+          "on-primary-fixed-variant": "#3d4c05",
+          "inverse-on-surface": "#282E16",
+          "on-secondary-fixed-variant": "#424a31",
+          "secondary-container": "#3A4320",
+          "secondary-fixed": "#D2DCB4",
+          "surface": "#282E16",
+          "primary": "#A4B566",
+          "on-error": "#690005",
+          "inverse-primary": "#54651e",
+          "on-background": "#F0F3E8",
+          "background": "#282E16",
+          "lime-leaf": "#6B7D3B",
+          "forest-card": "#30371A",
+          "on-error-container": "#ffdad6",
+          "on-tertiary": "#2e3129",
+          "surface-container-high": "#3F4922",
+          "tertiary-container": "#8B9B4C",
+          "forest-raised": "#38411F",
+          "surface-container": "#353D1E",
+          "hairline-emerald": "#525E31",
+          "tertiary-fixed-dim": "#c5c8bc",
+          "error-container": "#93000a",
+          "on-secondary": "#1F240F",
+          "primary-container": "#8B9B4C",
+          "on-tertiary-container": "#1F240F",
+          "on-secondary-fixed": "#171e09",
+          "on-tertiary-fixed-variant": "#45483f",
+          "primary-fixed": "#D2DCB4",
+          "error": "#E57373",
+          "outline-variant": "#454F26",
+          "primary-fixed-dim": "#9EAF6D",
+          "on-primary": "#1F240F",
+          "on-tertiary-fixed": "#1a1d15",
+          "tertiary-fixed": "#e2e4d8",
+          "surface-container-lowest": "#161B09",
+          "tertiary": "#C2CE9F",
+          "surface-container-highest": "#485327",
+          "surface-dim": "#1E240D",
+          "on-secondary-container": "#E1E8D1",
+          "surface-tint": "#A4B566",
+          "chartreuse-bright": "#A4B566",
+          "on-primary-fixed": "#161e00",
+          "inverse-surface": "#F0F3E8",
+          "surface-bright": "#454F26"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter-sm": "0.75rem",
+          "gutter": "1rem",
+          "space-2xl": "2rem",
+          "space-xl": "1.5rem",
+          "space-lg": "1rem",
+          "margin-mobile": "1rem",
+          "margin": "1rem",
+          "space-md": "0.75rem",
+          "space-sm": "0.5rem",
+          "space-xs": "0.25rem"
+        },
+        "fontFamily": {
+          "headline-lg": ["Chivo", "sans-serif"],
+          "label-sm": ["JetBrains Mono", "monospace"],
+          "body-lg": ["Chivo", "sans-serif"],
+          "headline-sm": ["Chivo", "sans-serif"],
+          "headline-md": ["Chivo", "sans-serif"],
+          "display": ["Chivo", "sans-serif"],
+          "body-md": ["Chivo", "sans-serif"],
+          "label-lg": ["JetBrains Mono", "monospace"],
+          "label-md": ["JetBrains Mono", "monospace"],
+          "data-metric": ["Chivo", "sans-serif"],
+          "body-sm": ["Chivo", "sans-serif"]
+        },
+        "fontSize": {
+          "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+          "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }],
+          "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+          "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+          "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+          "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+          "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+          "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+          "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+          "data-metric": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+          "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "500" }]
+        }
+      }
+    }
+  };
+</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-forest-base font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-[#1D230E]/95 backdrop-blur-xl border-b border-[#525E31]/40 shadow-[0_2px_12px_rgba(0,0,0,0.4)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="LAMBO Logo" class="h-8 w-auto object-contain shrink-0 drop-shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzAS4x_66gKyi2wmBeLtN-D6OXc6pltpzUN94W2UgsO4jjdb6whUs6bsGAJhQjXrnbP4sUDKAjt0_Zdpd-5CLFHZErZopff1xewz2LohTgwSuOIcmD4_szb1w8x3U3gdJNCI29RjkeuKHJqrHEN6S764TdZfCpeyh-lFzYbvZNEcCw6Sfk8JbKyWh8MjAwtiIvhG2EvKSg5p9P83ROpqOvQp7zW3Q7OwIvdqN3PZKpZK_0KjVMFv8"/><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-[#C2CE9F] uppercase tracking-wider truncate">LAMBO V1.0</span><h1 class="font-headline-sm text-headline-sm text-[#F0F3E8] truncate">Dashboard</h1></div></div><div class="flex items-center gap-space-sm shrink-0"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-[#30371A] border border-[#525E31] text-[#D2DCB4]"><span class="material-symbols-outlined text-[16px] text-[#A4B566]">cloud_done</span><span class="font-label-sm text-label-sm font-semibold">Offline Ready</span></div><div class="w-8 h-8 rounded-full overflow-hidden shrink-0 flex items-center justify-center ring-2 ring-[#8B9B4C]/60"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABR9k1uRhhu5kdgxOIAKfW4TMmgWGYzD_FHwW9GQpKUPQqu7OvtqDb13n5QJg4c1bRiOuz1Ro5bQCvWUA9f4AAV1flWZfLgbZmcTm3PuXNm0tWODEfZA1fGNfohVZzt5jpBwIngd0Nd-hUY9O-gGDAWD9jFoaamvzsKkrDwJvXtgCF0X30BgVt4YdHHsnvDefyHYzNK4ArLabncohNGUePnWPfcX0p4E58hs0N6lXdlWL5GGeqXhs"/></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-[#282E16] min-h-screen"><div class="flex flex-col w-full">
+<div class="px-margin-mobile pt-space-md pb-space-2xl space-y-space-lg">
+<!-- Welcome Header & Field Environment Context -->
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-[#F0F3E8]">Good morning, Ranger Elena</h2>
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-[#30371A] border border-[#525E31] text-[#A4B566]">
+<span class="material-symbols-outlined text-[20px]">forest</span>
+</span>
+</div>
+<div class="inline-flex items-center gap-space-xs self-start px-space-sm py-1 rounded-full bg-[#1D230E] border border-[#525E31]/60 text-[#D8DFC8] font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-[#A4B566]">wb_sunny</span>
+<span class="text-[#F0F3E8]">71°F Clear</span>
+<span class="w-1 h-1 rounded-full bg-[#8B9B4C]"></span>
+<span class="font-medium text-[#F0F3E8]">Forest Zone 4B</span>
+</div>
+</div>
+<!-- Fast Action Banner: Deep Forest Card with AR Scan Trigger -->
+<div class="relative overflow-hidden rounded-xl bg-[#1D230E] text-[#F0F3E8] p-space-lg shadow-lg border border-[#5D6A37]">
+<div class="flex items-start justify-between gap-space-md relative z-10">
+<div class="space-y-space-xs max-w-[210px]">
+<div class="inline-flex items-center gap-1.5 text-[#C2CE9F] font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#A4B566] animate-pulse"></span>
+            LiDAR Calibration Active
+          </div>
+<h3 class="font-headline-sm text-headline-sm text-[#F0F3E8]">Field Measurement</h3>
+<p class="font-body-sm text-body-sm text-[#D8DFC8]">Instant trunk diameter, crown radius, and automated bark condition tag.</p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-[#30371A] border border-[#5D6A37] flex items-center justify-center shrink-0 text-[#A4B566] shadow-inner">
+<span class="material-symbols-outlined text-[28px]">view_in_ar</span>
+</div>
+</div>
+<div class="mt-space-lg relative z-10">
+<button class="w-full h-12 rounded-lg bg-[#8B9B4C] hover:bg-[#9EAF6D] active:scale-[0.98] transition-transform text-[#1F240F] font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-sm shadow-md" type="button">
+<span class="material-symbols-outlined text-[20px] font-bold">qr_code_scanner</span>
+<span class="">Quick AR Scan &amp; Measure</span>
+</button>
+</div>
+<!-- Subtle atmospheric geometric backdrop accent -->
+<svg class="absolute -right-6 -bottom-6 w-36 h-36 text-[#8B9B4C]/15 pointer-events-none" fill="currentColor" viewbox="0 0 100 100">
+<circle cx="50" cy="50" fill="none" opacity="0.4" r="45" stroke="currentColor" stroke-width="2"></circle>
+<circle cx="50" cy="50" fill="none" opacity="0.3" r="30" stroke="currentColor" stroke-width="2"></circle>
+<circle cx="50" cy="50" fill="none" opacity="0.2" r="15" stroke="currentColor" stroke-width="2"></circle>
+<path d="M50 0 v100 M0 50 h100" opacity="0.25" stroke="currentColor" stroke-width="1.5"></path>
+</svg>
+</div>
+<!-- Quick Stats Telemetry Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Monitored Specimen Count -->
+<div class="col-span-2 rounded-lg bg-[#30371A] p-space-lg shadow-sm border border-[#525E31] space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-[#C2CE9F]">Specimens Monitored</span>
+<span class="flex items-center gap-0.5 px-space-xs py-0.5 rounded bg-[#1D230E] border border-[#5D6A37] text-[#D2DCB4] font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+            +12 this wk
+          </span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-data-metric text-data-metric text-[#F0F3E8]">1,428</span>
+<span class="font-body-sm text-body-sm text-[#AAB596]">tagged trees</span>
+</div>
+</div>
+<!-- Canopy Health Metric -->
+<div class="rounded-lg bg-[#30371A] p-space-md shadow-sm border border-[#525E31] space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-[#C2CE9F] truncate">Canopy Health</span>
+<span class="w-2 h-2 rounded-full bg-[#A4B566] shadow-[0_0_8px_#A4B566]"></span>
+</div>
+<div class="font-headline-md text-headline-md text-[#F0F3E8]">98.4%</div>
+<div class="inline-flex px-space-xs py-0.5 rounded bg-[#3A4320] border border-[#5D6A37] text-[#D2DCB4] font-label-sm text-label-sm font-semibold">
+          Optimal
+        </div>
+</div>
+<!-- Cached Offline Records -->
+<div class="rounded-lg bg-[#30371A] p-space-md shadow-sm border border-[#525E31] space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-[#C2CE9F] truncate">Pending Logs</span>
+<span class="material-symbols-outlined text-[16px] text-[#A4B566]">cloud_queue</span>
+</div>
+<div class="font-headline-md text-headline-md text-[#F0F3E8]">34</div>
+<div class="inline-flex px-space-xs py-0.5 rounded bg-[#1D230E] border border-[#525E31] text-[#D8DFC8] font-label-sm text-label-sm font-semibold truncate">
+          Cached locally
+        </div>
+</div>
+</div>
+<!-- Specimen Health Breakdown (Telemetry Donut & Legenda) -->
+<div class="rounded-lg bg-[#30371A] p-space-lg shadow-sm border border-[#525E31] space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-[#F0F3E8]">Specimen Health</h4>
+<p class="font-body-sm text-body-sm text-[#AAB596]">Forest Sector 4B Distribution</p>
+</div>
+<span class="material-symbols-outlined text-[#C2CE9F]">donut_large</span>
+</div>
+<div class="flex items-center gap-space-lg">
+<!-- SVG Donut Chart representing 84%, 12%, 4% with military olive & khaki tones -->
+<div class="relative w-24 h-24 shrink-0 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<!-- Background base circle -->
+<circle class="stroke-[#1D230E]" cx="18" cy="18" fill="none" r="14" stroke-width="4.5"></circle>
+<!-- Healthy 84% in tactical olive drab #A4B566 -->
+<circle cx="18" cy="18" fill="none" r="14" stroke="#A4B566" stroke-dasharray="73.89 100" stroke-dashoffset="0" stroke-linecap="round" stroke-width="4.5"></circle>
+<!-- Monitoring 12% in secondary khaki/olive #6B7D3B -->
+<circle cx="18" cy="18" fill="none" r="14" stroke="#6B7D3B" stroke-dasharray="10.55 100" stroke-dashoffset="-75" stroke-linecap="round" stroke-width="4.5"></circle>
+<!-- Intervention 4% in tactical warning muted red #E57373 -->
+<circle cx="18" cy="18" fill="none" r="14" stroke="#E57373" stroke-dasharray="3.5 100" stroke-dashoffset="-87" stroke-linecap="round" stroke-width="4.5"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center">
+<span class="font-headline-sm text-headline-sm text-[#F0F3E8] font-bold">84%</span>
+<span class="font-label-sm text-label-sm text-[#C2CE9F] font-semibold">Good</span>
+</div>
+</div>
+<!-- Legend breakdown -->
+<div class="flex flex-col justify-center gap-space-sm flex-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-[#A4B566] shrink-0"></span>
+<span class="font-body-sm text-body-sm text-[#F0F3E8] truncate">Healthy</span>
+</div>
+<span class="font-label-md text-label-md text-[#F0F3E8] font-semibold">84%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-[#6B7D3B] shrink-0"></span>
+<span class="font-body-sm text-body-sm text-[#F0F3E8] truncate">Monitoring</span>
+</div>
+<span class="font-label-md text-label-md text-[#F0F3E8] font-semibold">12%</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-[#E57373] shrink-0"></span>
+<span class="font-body-sm text-body-sm text-[#F0F3E8] truncate">Intervention</span>
+</div>
+<span class="font-label-md text-label-md text-[#F0F3E8] font-semibold">4%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Field Activity Section with Filter Chips -->
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-[#F0F3E8]">Recent Field Activity</h3>
+<button class="font-label-md text-label-md text-[#A4B566] font-bold hover:underline" type="button">View History</button>
+</div>
+<!-- Filter Chips Row (Scrollable) -->
+<div class="flex items-center gap-space-sm overflow-x-auto no-scrollbar py-0.5 -mx-margin-mobile px-margin-mobile">
+<button class="shrink-0 h-10 px-space-md rounded-full bg-[#8B9B4C] text-[#1F240F] font-label-md text-label-md font-bold flex items-center justify-center transition-colors shadow-sm" type="button">
+          All Zones
+        </button>
+<button class="shrink-0 h-10 px-space-md rounded-full bg-[#30371A] text-[#D8DFC8] border border-[#525E31] font-label-md text-label-md flex items-center justify-center hover:bg-[#38411F] transition-colors" type="button">
+          Zone 4B
+        </button>
+<button class="shrink-0 h-10 px-space-md rounded-full bg-[#30371A] text-[#D8DFC8] border border-[#525E31] font-label-md text-label-md flex items-center justify-center hover:bg-[#38411F] transition-colors" type="button">
+          Redwoods
+        </button>
+<button class="shrink-0 h-10 px-space-md rounded-full bg-[#30371A] text-[#D8DFC8] border border-[#525E31] font-label-md text-label-md flex items-center justify-center hover:bg-[#38411F] transition-colors" type="button">
+          Needing Inspection
+        </button>
+</div>
+<!-- Specimen Feed List -->
+<div class="space-y-space-sm">
+<!-- Specimen Item 1 -->
+<div class="rounded-lg bg-[#30371A] p-space-md shadow-sm border border-[#525E31] flex items-center justify-between gap-space-md active:bg-[#38411F] transition-colors">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative w-12 h-12 rounded-lg bg-[#1D230E] overflow-hidden shrink-0 ring-1 ring-[#525E31]">
+<img class="w-full h-full object-cover" data-alt="A grand Coastal Redwood tree trunk with detailed rough fibrous bark in sunlight, natural forestry arborist photograph taken in a lush northern California reserve." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCklv9HTK8UZDED__JtHdMpxb_MPhm2QGf5XIPTSLDfLQekxBU3Xc9-IWOHx2ypngHCb0YqvdpKC_ubiimgEPP_caa3gDrW4cMBllsV0CHStcB1Li4GepP4XgwyGrpUrddl3ucHc5wyJ7GYdpI0ev0IK_W9mG8UtskhjWhXCeZz_LLxBWOX_5S0Cy3UiHbWWv4eN09c0fYkFzdJ2tt1zwqmLg0YcvSorNwoL6QTQi64ldGSEBBEns"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 truncate">
+<span class="font-label-lg text-label-lg text-[#F0F3E8] font-semibold truncate">#GT-8842</span>
+<span class="text-[#C2CE9F] font-body-sm text-body-sm truncate">• Redwood</span>
+</div>
+<span class="font-body-sm text-body-sm text-[#AAB596] truncate">Logged 18m ago</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 gap-1">
+<span class="px-space-xs py-0.5 rounded-full bg-[#3A4320] border border-[#5D6A37] text-[#D2DCB4] font-label-sm text-label-sm font-semibold">
+              Healthy
+            </span>
+<span class="font-label-md text-label-md text-[#A4B566] font-semibold flex items-center">
+              +1.8cm
+            </span>
+</div>
+</div>
+<!-- Specimen Item 2 -->
+<div class="rounded-lg bg-[#30371A] p-space-md shadow-sm border border-[#525E31] flex items-center justify-between gap-space-md active:bg-[#38411F] transition-colors">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative w-12 h-12 rounded-lg bg-[#1D230E] overflow-hidden shrink-0 ring-1 ring-[#525E31]">
+<img class="w-full h-full object-cover" data-alt="Close up of Douglas Fir needles and tree bark covered in light lichen, forest canopy background with soft sunlight filtration, high resolution nature botany photo." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNUYd9bYOSi4gCgYevKz6ZKUJC9XPCS96ZFNIkOtA3pV22Q8rAzznTLI7OSSe3lH8aLRsrj2fkpxmUc30jDxOXRXoKU5MgALJw4KIwnrQPXfV1QDpQmCVHgNzVXhLRWOztFF2XYN4JYFCq2IvxlsPi0ATY6UZqVzyw6DQS65BT5TBgFSqbtuC8d3PFAoY--d0JgSIIe0Yvh2TBW_zb8pLv6PruYrtAyfFWn8Er4lXBRmKsfo_8C48"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 truncate">
+<span class="font-label-lg text-label-lg text-[#F0F3E8] font-semibold truncate">#GT-8841</span>
+<span class="text-[#C2CE9F] font-body-sm text-body-sm truncate">• Douglas Fir</span>
+</div>
+<span class="font-body-sm text-body-sm text-[#AAB596] truncate">Logged 42m ago</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 gap-1">
+<span class="px-space-xs py-0.5 rounded-full bg-[#3A4320] border border-[#5D6A37] text-[#D2DCB4] font-label-sm text-label-sm font-semibold">
+              Healthy
+            </span>
+<span class="font-label-md text-label-md text-[#A4B566] font-semibold flex items-center">
+              +0.9cm
+            </span>
+</div>
+</div>
+<!-- Specimen Item 3 -->
+<div class="rounded-lg bg-[#30371A] p-space-md shadow-sm border border-[#525E31] flex items-center justify-between gap-space-md active:bg-[#38411F] transition-colors">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative w-12 h-12 rounded-lg bg-[#1D230E] overflow-hidden shrink-0 ring-1 ring-[#525E31]">
+<img class="w-full h-full object-cover" data-alt="Western Hemlock evergreen tree branches in deep temperate rainforest, vibrant moss and morning dew on foliage, crisp natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALjZAsnQfLhqB8g9lZnPYvBAx6ZQ4d1VEGNqNELzpivvDqbEP6Qz62WQj_edrMnj4Y5uo__6gAU7IzS5HcPbJK1eUqSOUExv_Nh5uvEuQjfxeh9Qnl73m_Dt03qoaXwlDg60W7MGyZnL8p8mtFhgcp5ybelI37jiUodlnN8CHeqA4zZ9IHnwvUtTGR5DvWB14y_Clq30Sja_Ym3qqN17qVHmEe9kt9cVwLIxh6By5zgcy9nZFt0m8"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 truncate">
+<span class="font-label-lg text-label-lg text-[#F0F3E8] font-semibold truncate">#GT-8839</span>
+<span class="text-[#C2CE9F] font-body-sm text-body-sm truncate">• Hemlock</span>
+</div>
+<span class="font-body-sm text-body-sm text-[#AAB596] truncate">Logged 2h ago</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 gap-1">
+<span class="px-space-xs py-0.5 rounded-full bg-[#3A4320] border border-[#5D6A37] text-[#D2DCB4] font-label-sm text-label-sm font-semibold">
+              Healthy
+            </span>
+<span class="font-label-md text-label-md text-[#A4B566] font-semibold flex items-center">
+              +2.3cm
+            </span>
+</div>
+</div>
+<!-- Specimen Item 4 -->
+<div class="rounded-lg bg-[#30371A] p-space-md shadow-sm border border-[#525E31] flex items-center justify-between gap-space-md active:bg-[#38411F] transition-colors">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative w-12 h-12 rounded-lg bg-[#1D230E] overflow-hidden shrink-0 ring-1 ring-[#525E31]">
+<img class="w-full h-full object-cover" data-alt="Bigleaf Maple tree leaves with subtle autumn discoloration and moisture telemetry tags attached to trunk, realistic field forestry camera survey." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB8RTml3BlwL-tvopQQDNPkHV0uC5PrsNDmw8bNW9hmcUPLXFA3gk3rfuD_sQlnzqm9khxKIx9EN_NzHPcINHaztiksZfV_3ARiHUMz3-7BHqkzmGPQcWP21psr12-mcEz91uKw-U40lUMkUrFW-rRraSTMnkd4XXDcgcUfDAoCZKPgggNlfQfHCmbHYR098nA2DoIoIhdnzzqQWLd1scBV0_qyQs6depehfpbk-tisNkAwKegifw"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 truncate">
+<span class="font-label-lg text-label-lg text-[#F0F3E8] font-semibold truncate">#GT-8835</span>
+<span class="text-[#C2CE9F] font-body-sm text-body-sm truncate">• Bigleaf Maple</span>
+</div>
+<span class="font-body-sm text-body-sm text-[#AAB596] truncate">Logged 3h ago</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 gap-1">
+<span class="px-space-xs py-0.5 rounded-full bg-[#1D230E] border border-[#B38F46]/60 text-[#E7D688] font-label-sm text-label-sm font-semibold">
+              Dry Soil
+            </span>
+<span class="font-label-md text-label-md text-[#E7D688] font-semibold flex items-center">
+              +0.2cm
+            </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#1D230E]/95 backdrop-blur-xl border-t border-[#525E31]/40 shadow-[0_-2px_12px_rgba(0,0,0,0.4)]" data-active-classes="text-[#A4B566] font-bold"><div class="h-16 flex items-center justify-around px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 transition-colors text-[#A4B566] font-bold" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[24px]">grid_view</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-[#D8DFC8] hover:text-[#F0F3E8] transition-colors" data-path="scan-camera" href="#"><span class="material-symbols-outlined text-[24px]">qr_code_scanner</span><span class="font-label-sm text-label-sm">Scan</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-[#D8DFC8] hover:text-[#F0F3E8] transition-colors" data-path="trees" href="#"><span class="material-symbols-outlined text-[24px]">park</span><span class="font-label-sm text-label-sm">Trees</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-[#D8DFC8] hover:text-[#F0F3E8] transition-colors" data-path="growth-logs" href="#"><span class="material-symbols-outlined text-[24px]">query_stats</span><span class="font-label-sm text-label-sm">Logs</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-[#D8DFC8] hover:text-[#F0F3E8] transition-colors" data-path="register-tree" href="#"><span class="material-symbols-outlined text-[24px]">add_circle</span><span class="font-label-sm text-label-sm">Register</span></a></div></nav>
+</body></html>
