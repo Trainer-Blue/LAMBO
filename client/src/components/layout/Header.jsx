@@ -10,6 +10,7 @@ export default function Header({ title = 'Dashboard', subtitle = 'LAMBO V1.0' })
   const [showNewReminderInput, setShowNewReminderInput] = useState(false);
   const [newTitle, setNewTitle] = useState('');
   const [newTreeId, setNewTreeId] = useState('LMB-0001');
+  const [deferredPrompt, setDeferredPrompt] = useState(null);
 
   useEffect(() => {
     const handleOnline = () => setIsOnline(true);
@@ -18,11 +19,30 @@ export default function Header({ title = 'Dashboard', subtitle = 'LAMBO V1.0' })
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
 
+    const handleBeforeInstall = (e) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+    };
+    window.addEventListener('beforeinstallprompt', handleBeforeInstall);
+
     return () => {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstall);
     };
   }, []);
+
+  const handleInstallClick = async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        setDeferredPrompt(null);
+      }
+    } else {
+      alert('To install LAMBO:\n\n• On Android/Chrome: Tap browser menu (⋮) → "Install app" or "Add to Home screen"\n• On iPhone/iPad (Safari): Tap the Share button (⎋) → "Add to Home Screen" (⊕)');
+    }
+  };
 
   const pendingCount = reminders.filter((r) => !r.completed).length;
 
@@ -64,6 +84,17 @@ export default function Header({ title = 'Dashboard', subtitle = 'LAMBO V1.0' })
 
           {/* Action Pills & User Profile */}
           <div className="flex items-center gap-2.5 shrink-0">
+            {/* Install App Button */}
+            <button
+              type="button"
+              onClick={handleInstallClick}
+              title="Install LAMBO on this device"
+              className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#8B9B4C] hover:bg-[#9EAF6D] text-[#1F240F] font-mono text-xs font-bold transition-all active:scale-95 shadow-sm"
+            >
+              <span className="material-symbols-outlined text-[16px]">install_mobile</span>
+              <span className="hidden xs:inline">Install</span>
+            </button>
+
             {/* Reminders Bell Trigger */}
             <button
               type="button"
