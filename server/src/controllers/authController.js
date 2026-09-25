@@ -17,7 +17,7 @@ const generateToken = (id) => {
  */
 const register = async (req, res, next) => {
   try {
-    const { name, rollNumber, password, section, avatar } = req.body;
+    const { name, rollNumber, password, course, section, avatar } = req.body;
 
     if (!name || !rollNumber || !password) {
       return res.status(400).json({
@@ -42,7 +42,7 @@ const register = async (req, res, next) => {
       name: name.trim(),
       rollNumber: normalizedRoll,
       password,
-      section: section ? section.trim() : '',
+      course: (course || section || '').trim(),
       avatar: avatar || '',
     });
 
@@ -55,7 +55,7 @@ const register = async (req, res, next) => {
         id: user._id,
         name: user.name,
         rollNumber: user.rollNumber,
-        section: user.section,
+        course: user.course,
         avatar: user.avatar,
         createdAt: user.createdAt,
       },
@@ -110,7 +110,7 @@ const login = async (req, res, next) => {
         id: user._id,
         name: user.name,
         rollNumber: user.rollNumber,
-        section: user.section,
+        course: user.course,
         avatar: user.avatar,
       },
     });

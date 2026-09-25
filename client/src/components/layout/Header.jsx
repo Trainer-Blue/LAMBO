@@ -195,7 +195,7 @@ export default function Header({ title = 'Dashboard', subtitle = 'LAMBO V1.0' })
                         {user?.name || 'Student Observer'}
                       </h4>
                       <span className="font-mono text-[11px] text-[#AAB596] block truncate">
-                        {user?.rollNumber || '2024-BSAB-001'} {user?.section ? `• ${user.section}` : ''}
+                        {user?.rollNumber || '2024-BSAB-001'} {(user?.course || user?.section) ? `• ${user?.course || user?.section}` : ''}
                       </span>
                     </div>
                   </div>
