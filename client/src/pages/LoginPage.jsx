@@ -77,7 +77,7 @@ export default function LoginPage() {
               </span>
               <input
                 type="text"
-                placeholder="e.g. 2024-BSAB-001"
+                placeholder="e.g. 1234567"
                 value={rollNumber}
                 onChange={(e) => setRollNumber(e.target.value)}
                 className="w-full h-11 bg-[#1D230E] border border-[#525E31] rounded-xl pl-10 pr-3 text-sm font-mono text-[#F0F3E8] focus:outline-none focus:border-[#A4B566] focus:ring-1 focus:ring-[#A4B566] transition-colors"
