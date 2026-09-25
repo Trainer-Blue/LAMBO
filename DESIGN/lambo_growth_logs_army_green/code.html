@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "error-container": "#93000a",
+          "on-primary-fixed": "#161e00",
+          "outline-variant": "#46483b",
+          "on-tertiary-fixed": "#1a1d15",
+          "surface": "#2A3016",
+          "secondary-container": "#3D4621",
+          "on-primary-fixed-variant": "#3d4c05",
+          "on-tertiary": "#2e3129",
+          "on-secondary-fixed-variant": "#424a31",
+          "on-secondary-fixed": "#171e09",
+          "on-tertiary-fixed-variant": "#45483f",
+          "primary-fixed": "#d7ec95",
+          "on-primary-container": "#232e00",
+          "on-error-container": "#ffdad6",
+          "surface-tint": "#bbcf7c",
+          "primary-container": "#86984c",
+          "tertiary-fixed": "#e2e4d8",
+          "tertiary-fixed-dim": "#c5c8bc",
+          "tertiary": "#c5c8bc",
+          "surface-bright": "#373c1e",
+          "secondary-fixed": "#dee6c4",
+          "on-background": "#F1F4E9",
+          "surface-dim": "#232813",
+          "inverse-surface": "#F1F4E9",
+          "surface-variant": "#333A1B",
+          "on-error": "#690005",
+          "tertiary-container": "#8f9287",
+          "on-secondary": "#2c331c",
+          "surface-container-high": "#38411F",
+          "outline": "#5D6A35",
+          "error": "#ffb4ab",
+          "on-primary": "#20260E",
+          "inverse-on-surface": "#2e3316",
+          "on-secondary-container": "#CCD6B8",
+          "on-surface-variant": "#CCD6B8",
+          "on-tertiary-container": "#282b23",
+          "background": "#2A3016",
+          "secondary-fixed-dim": "#c2caaa",
+          "surface-container-highest": "#3D4621",
+          "primary-fixed-dim": "#bbcf7c",
+          "surface-container-low": "#232813",
+          "secondary": "#C4D296",
+          "primary": "#C4D296",
+          "inverse-primary": "#54651e",
+          "surface-container": "#2E3519",
+          "on-surface": "#F1F4E9",
+          "surface-container-lowest": "#1B1F0E"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin": "1rem",
+          "margin-mobile": "0.75rem",
+          "gutter-desktop": "1.5rem",
+          "gutter": "1rem",
+          "space-lg": "1.25rem",
+          "space-sm": "0.5rem",
+          "margin-desktop": "2rem",
+          "space-xs": "0.25rem",
+          "space-xl": "2rem",
+          "gutter-mobile": "0.75rem",
+          "space-md": "0.75rem"
+        },
+        "fontFamily": {
+          "headline-lg": ["Chivo"],
+          "headline-md": ["Chivo"],
+          "label-lg": ["JetBrains Mono"],
+          "label-md": ["JetBrains Mono"],
+          "headline-sm": ["Chivo"],
+          "display-lg": ["Chivo"],
+          "display-lg-mobile": ["Chivo"],
+          "body-md": ["Chivo"],
+          "body-sm": ["Chivo"],
+          "label-sm": ["JetBrains Mono"],
+          "body-lg": ["Chivo"]
+        },
+        "fontSize": {
+          "headline-lg": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+          "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+          "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.06em", "fontWeight": "600" }],
+          "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500" }],
+          "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+          "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+          "display-lg-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+          "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+          "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+          "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "500" }],
+          "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+        }
+      }
+    }
+  };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-[#2A3016] font-body-md text-body-md text-[#F1F4E9] antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-[#2A3016]/95 backdrop-blur-xl border-b border-[#434D25] shadow-[0_1px_12px_rgba(0,0,0,0.4)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="LAMBO Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzAS4x_66gKyi2wmBeLtN-D6OXc6pltpzUN94W2UgsO4jjdb6whUs6bsGAJhQjXrnbP4sUDKAjt0_Zdpd-5CLFHZErZopff1xewz2LohTgwSuOIcmD4_szb1w8x3U3gdJNCI29RjkeuKHJqrHEN6S764TdZfCpeyh-lFzYbvZNEcCw6Sfk8JbKyWh8MjAwtiIvhG2EvKSg5p9P83ROpqOvQp7zW3Q7OwIvdqN3PZKpZK_0KjVMFv8"/><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-[#C4D296] uppercase tracking-wider truncate">LAMBO V1.0</span><h1 class="font-headline-sm text-headline-sm text-[#F1F4E9] truncate">Growth Logs</h1></div></div><div class="flex items-center gap-space-sm shrink-0"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-[#333A1B] text-[#C4D296] border border-[#525E2D]"><span class="material-symbols-outlined text-[16px] text-[#C4D296]">cloud_done</span><span class="font-label-sm text-label-sm font-semibold">Offline Ready</span></div><div class="w-8 h-8 rounded-full overflow-hidden shrink-0 flex items-center justify-center ring-2 ring-[#C4D296]"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABR9k1uRhhu5kdgxOIAKfW4TMmgWGYzD_FHwW9GQpKUPQqu7OvtqDb13n5QJg4c1bRiOuz1Ro5bQCvWUA9f4AAV1flWZfLgbZmcTm3PuXNm0tWODEfZA1fGNfohVZzt5jpBwIngd0Nd-hUY9O-gGDAWD9jFoaamvzsKkrDwJvXtgCF0X30BgVt4YdHHsnvDefyHYzNK4ArLabncohNGUePnWPfcX0p4E58hs0N6lXdlWL5GGeqXhs"/></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-[#2A3016] min-h-screen"><div class="flex flex-col w-full">
+<!-- Specimen Context Banner -->
+<div class="px-margin-mobile pt-space-md pb-space-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-[#C4D296]" style="font-variation-settings: 'FILL' 1;">park</span>
+<span class="font-label-sm text-label-sm text-[#C4D296] uppercase tracking-wider font-semibold">Coast Redwood</span>
+</div>
+<div class="flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-[#333A1B] text-[#C4D296] border border-[#525E2D]">
+<span class="w-2 h-2 rounded-full bg-[#C4D296] animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-semibold">Active Monitoring</span>
+</div>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-[#F1F4E9]">Specimen #GT-8842 Growth Telemetry</h2>
+<p class="font-body-sm text-body-sm text-[#CCD6B8]">Plot 14-B · Muir Coastal Ridge Sanctuary</p>
+</div>
+<!-- High-Impact Telemetry Summary Grid -->
+<div class="grid grid-cols-2 gap-space-sm mt-space-xs">
+<div class="bg-[#333A1B] p-space-md rounded-lg shadow-sm flex flex-col justify-between border border-[#485327]">
+<div class="flex items-center justify-between text-[#CCD6B8]">
+<span class="font-label-md text-label-md font-medium text-[#CCD6B8]">Cumulative Height</span>
+<span class="material-symbols-outlined text-[18px] text-[#C4D296]">arrow_upward_alt</span>
+</div>
+<div class="mt-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-[#F1F4E9] font-bold">+3.2</span>
+<span class="font-label-lg text-label-lg text-[#C4D296] font-semibold">m</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#C4D296] font-bold">+21.0% since intake</span>
+</div>
+</div>
+<div class="bg-[#333A1B] p-space-md rounded-lg shadow-sm flex flex-col justify-between border border-[#485327]">
+<div class="flex items-center justify-between text-[#CCD6B8]">
+<span class="font-label-md text-label-md font-medium text-[#CCD6B8]">Tracked Timeline</span>
+<span class="material-symbols-outlined text-[18px] text-[#C4D296]">history_toggle_off</span>
+</div>
+<div class="mt-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-[#F1F4E9] font-bold">4.2</span>
+<span class="font-label-lg text-label-lg text-[#C4D296] font-semibold">yrs</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#CCD6B8]">14 verified field audits</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Timeframe Filter Chips -->
+<div class="px-margin-mobile py-space-xs overflow-x-auto">
+<div class="flex items-center gap-space-xs pb-1" id="timeline-filters">
+<button class="filter-chip px-space-md py-2 rounded-full font-label-md text-label-md bg-[#333A1B] text-[#CCD6B8] border border-[#485327] shadow-sm whitespace-nowrap active:scale-95 transition-all" type="button">
+        6 Months
+      </button>
+<button class="filter-chip px-space-md py-2 rounded-full font-label-md text-label-md bg-[#333A1B] text-[#CCD6B8] border border-[#485327] shadow-sm whitespace-nowrap active:scale-95 transition-all" type="button">
+        1 Year
+      </button>
+<button class="filter-chip px-space-md py-2 rounded-full font-label-md text-label-md bg-[#C4D296] text-[#20260E] shadow-sm whitespace-nowrap active:scale-95 transition-all font-bold" type="button">
+        All Time
+      </button>
+<button class="filter-chip px-space-md py-2 rounded-full font-label-md text-label-md bg-[#333A1B] text-[#CCD6B8] border border-[#485327] shadow-sm whitespace-nowrap active:scale-95 transition-all" type="button">
+        Milestones
+      </button>
+</div>
+</div>
+<!-- Interactive Growth Trend Chart Card -->
+<div class="px-margin-mobile py-space-sm">
+<div class="bg-[#333A1B] p-space-lg rounded-xl shadow-md flex flex-col gap-space-md border border-[#485327]">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-[#C4D296]">ssid_chart</span>
+<span class="font-headline-sm text-headline-sm text-[#F1F4E9]">Progression Curves</span>
+</div>
+<span class="font-body-sm text-body-sm text-[#CCD6B8]">Vertical height vs. DBH girth tracking</span>
+</div>
+<div class="px-2.5 py-1 rounded bg-[#3D4621] border border-[#5A6732] text-[#F1F4E9]">
+<span class="font-label-sm text-label-sm font-bold text-[#C4D296]">Field-Grade</span>
+</div>
+</div>
+<!-- Growth Comparison Callout Badge -->
+<div class="bg-[#2B3117] px-space-md py-space-sm rounded-lg flex items-center justify-between border border-[#434D25]">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-[#C4D296]" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-label-md text-label-md text-[#F1F4E9] font-medium">Surpassing regional baseline</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-[#C4D296] text-[#20260E] font-bold">+14.2%</span>
+</div>
+<!-- High Contrast Vector Graph on Tactical Olive Drab Canvas -->
+<div class="relative w-full h-48 bg-[#232813] rounded-lg p-space-sm flex flex-col justify-between overflow-hidden border border-[#3E4723]">
+<!-- SVG Canvas for Lines -->
+<svg class="absolute inset-0 w-full h-full p-2" preserveaspectratio="none" viewbox="0 0 340 180">
+<!-- Background Grid Lines -->
+<line stroke="#404A24" stroke-dasharray="3,3" stroke-width="1" x1="20" x2="330" y1="30" y2="30"></line>
+<line stroke="#404A24" stroke-dasharray="3,3" stroke-width="1" x1="20" x2="330" y1="80" y2="80"></line>
+<line stroke="#404A24" stroke-dasharray="3,3" stroke-width="1" x1="20" x2="330" y1="130" y2="130"></line>
+<!-- Area Gradient Fill -->
+<defs>
+<lineargradient id="primaryArea" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#C4D296" stop-opacity="0.38"></stop>
+<stop offset="100%" stop-color="#C4D296" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="diameterArea" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#8B9B4C" stop-opacity="0.22"></stop>
+<stop offset="100%" stop-color="#8B9B4C" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Height Growth Area & Curve (Spring '21 to Fall '24) -->
+<path d="M 30,145 Q 110,125 180,95 T 310,38 L 310,170 L 30,170 Z" fill="url(#primaryArea)"></path>
+<path d="M 30,145 Q 110,125 180,95 T 310,38" fill="none" stroke="#C4D296" stroke-linecap="round" stroke-width="3.5"></path>
+<!-- DBH Secondary Curve -->
+<path d="M 30,158 Q 115,142 190,122 T 310,72" fill="none" stroke="#8B9B4C" stroke-dasharray="5,4" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Interactive Node Anchors (Spring, Summer, Fall) -->
+<!-- Point 1 (Nov 2023) -->
+<circle class="cursor-pointer hover:r-7 transition-all" cx="120" cy="120" fill="#2A3016" r="5" stroke="#C4D296" stroke-width="3"></circle>
+<!-- Point 2 (May 2024) -->
+<circle class="cursor-pointer hover:r-7 transition-all" cx="215" cy="82" fill="#2A3016" r="5" stroke="#C4D296" stroke-width="3"></circle>
+<!-- Point 3 (Oct 2024 - Latest) -->
+<circle class="cursor-pointer animate-ping" cx="310" cy="38" fill="#C4D296" r="6" stroke="#ffffff" stroke-width="2.5"></circle>
+<circle cx="310" cy="38" fill="#C4D296" r="6" stroke="#ffffff" stroke-width="2.5"></circle>
+</svg>
+<!-- Dynamic Floating Value Pin -->
+<div class="relative z-10 self-end mr-4 -mt-1 bg-[#C4D296] text-[#20260E] px-2 py-0.5 rounded shadow-md flex items-center gap-1 pointer-events-none font-bold">
+<span class="font-label-sm text-label-sm">18.4m</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide opacity-80">Latest</span>
+</div>
+<!-- Axis Labels -->
+<div class="relative z-10 w-full flex justify-between px-3 text-[#CCD6B8] font-label-sm text-label-sm mt-auto">
+<span>Nov '23</span>
+<span>May '24</span>
+<span>Aug '24</span>
+<span class="font-bold text-[#C4D296]">Oct '24</span>
+</div>
+</div>
+<!-- Legend & Axis Units -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-[#C4D296]"></span>
+<span class="font-label-sm text-label-sm text-[#F1F4E9] font-medium">Height (m)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-1 bg-[#8B9B4C] rounded"></span>
+<span class="font-label-sm text-label-sm text-[#F1F4E9] font-medium">DBH (cm)</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-[#CCD6B8]">Verified LiDAR calibrated</span>
+</div>
+</div>
+</div>
+<!-- Historical Field Entries Timeline -->
+<div class="px-margin-mobile py-space-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-[#C4D296]">event_note</span>
+<h3 class="font-headline-sm text-headline-sm text-[#F1F4E9]">Audit History</h3>
+</div>
+<span class="font-label-sm text-label-sm text-[#C4D296] font-semibold">14 total entries</span>
+</div>
+<!-- Timeline Container -->
+<div class="relative flex flex-col gap-space-md pl-6 mt-space-xs">
+<!-- Tactical Olive Drab Rail with Subtle Glow -->
+<div class="absolute left-2.5 top-3 bottom-6 w-0.5 bg-[#5D6A35]"></div>
+<!-- ENTRY 1: Latest (Oct 24, 2024) -->
+<div class="relative flex flex-col bg-[#333A1B] rounded-xl p-space-md shadow-sm border border-[#485327]">
+<!-- Node indicator -->
+<div class="absolute -left-[21px] top-4 w-4 h-4 rounded-full bg-[#C4D296] flex items-center justify-center shadow-md ring-4 ring-[#2A3016]">
+<div class="w-1.5 h-1.5 rounded-full bg-[#20260E]"></div>
+</div>
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-[#ffffff] font-bold">Oct 24, 2024</span>
+<span class="px-2 py-0.5 rounded-full bg-[#3D4621] border border-[#5A6732] text-[#C4D296] font-label-sm text-label-sm font-bold">Latest Entry</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#CCD6B8]">09:42 AM</span>
+</div>
+<!-- Metrics Chips Row -->
+<div class="grid grid-cols-2 gap-space-sm py-space-sm">
+<div class="bg-[#2B3117] p-2.5 rounded-lg border border-[#404A24]">
+<span class="font-label-sm text-label-sm text-[#CCD6B8]">Height</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-[#ffffff] font-bold">18.4</span>
+<span class="font-label-sm text-label-sm text-[#CCD6B8]">meters</span>
+<span class="text-[#C4D296] font-label-sm text-label-sm font-bold ml-auto">+0.5m</span>
+</div>
+</div>
+<div class="bg-[#2B3117] p-2.5 rounded-lg border border-[#404A24]">
+<span class="font-label-sm text-label-sm text-[#CCD6B8]">Diameter (DBH)</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-[#ffffff] font-bold">46.2</span>
+<span class="font-label-sm text-label-sm text-[#CCD6B8]">cm</span>
+<span class="text-[#C4D296] font-label-sm text-label-sm font-bold ml-auto">+1.1cm</span>
+</div>
+</div>
+</div>
+<!-- Specimen Photo Comparison Thumbnail & Notes -->
+<div class="flex gap-space-sm items-center py-space-xs">
+<div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-[#232813] shadow-inner relative border border-[#485327]">
+<img class="w-full h-full object-cover" data-alt="A lush, high-contrast close-up canopy photograph of a towering Coast Redwood trunk showing deep reddish-brown fibrous bark and vibrant emerald needles under soft natural morning sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd3Lqs3MwMT7cjnh_fj8ma5IQouA8T2ayczPNp0VMe83TWJr_iYFCz0cXvqS81eUy90jv_0V4iwdwumz_F5lyydxe3KwrkMlyvI0V9yvz49Yp9B2S18CG30dtw-MMEby6-NezdRAtl07hD4RmqFEJ-67T-aRcwx2X4btcuV7W2_a_ND1noJYdlDq1AfF_zLOwaGcWmUjvItQ3iWs_9pbenuw7NhKgLnvaKZtgCR7gnRDgLxtzjpmM"/>
+<div class="absolute bottom-0 right-0 px-1 rounded-tl bg-[#2A3016]/90 text-[#C4D296] font-label-sm text-[9px] font-bold">
+              IMG_48
+            </div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-[#C4D296]"></span>
+<span class="font-label-md text-label-md text-[#C4D296] font-bold">Vigorous Foliage · Healthy</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#CCD6B8] truncate">Apical leader intact, canopy density grade A.</p>
+<div class="flex items-center gap-1 mt-1 text-[#C4D296] font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">shield_person</span>
+<span class="">Logged by Ranger E. Vance (ID: #409)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ENTRY 2: (May 18, 2024) -->
+<div class="relative flex flex-col bg-[#333A1B] rounded-xl p-space-md shadow-sm border border-[#485327]">
+<!-- Node indicator -->
+<div class="absolute -left-[21px] top-4 w-4 h-4 rounded-full bg-[#3D4621] border border-[#5D6A35] flex items-center justify-center ring-4 ring-[#2A3016]">
+<div class="w-2 h-2 rounded-full bg-[#9EAF6D]"></div>
+</div>
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-lg text-label-lg text-[#ffffff] font-bold">May 18, 2024</span>
+<span class="font-label-sm text-label-sm text-[#CCD6B8]">14:15 PM</span>
+</div>
+<!-- Metrics Row -->
+<div class="grid grid-cols-2 gap-space-sm py-space-sm">
+<div class="bg-[#2B3117] p-2.5 rounded-lg border border-[#404A24]">
+<span class="font-label-sm text-label-sm text-[#CCD6B8]">Height</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-[#ffffff] font-bold">17.9</span>
+<span class="font-label-sm text-label-sm text-[#CCD6B8]">meters</span>
+<span class="text-[#C4D296] font-label-sm text-label-sm font-bold ml-auto">+0.8m</span>
+</div>
+</div>
+<div class="bg-[#2B3117] p-2.5 rounded-lg border border-[#404A24]">
+<span class="font-label-sm text-label-sm text-[#CCD6B8]">Diameter (DBH)</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-[#ffffff] font-bold">45.1</span>
+<span class="font-label-sm text-label-sm text-[#CCD6B8]">cm</span>
+<span class="text-[#C4D296] font-label-sm text-label-sm font-bold ml-auto">+1.3cm</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-[#CCD6B8] pt-1">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-[#C4D296]"></span>
+<span class="font-label-sm text-label-sm text-[#C4D296] font-semibold">Healthy Status</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#CCD6B8]">Ranger T. Cruz (ID: #118)</span>
+</div>
+</div>
+<!-- ENTRY 3: Annual Audit (Nov 10, 2023) -->
+<div class="relative flex flex-col bg-[#333A1B] rounded-xl p-space-md shadow-sm border border-[#485327]">
+<!-- Node indicator -->
+<div class="absolute -left-[21px] top-4 w-4 h-4 rounded-full bg-[#3D4621] border border-[#5D6A35] flex items-center justify-center ring-4 ring-[#2A3016]">
+<div class="w-2 h-2 rounded-full bg-[#9EAF6D]"></div>
+</div>
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-[#ffffff] font-bold">Nov 10, 2023</span>
+<span class="px-2 py-0.5 rounded-full bg-[#3D4621] border border-[#5A6732] text-[#C4D296] font-label-sm text-label-sm">Annual Audit</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#CCD6B8]">11:05 AM</span>
+</div>
+<!-- Metrics Row -->
+<div class="grid grid-cols-2 gap-space-sm py-space-sm">
+<div class="bg-[#2B3117] p-2.5 rounded-lg border border-[#404A24]">
+<span class="font-label-sm text-label-sm text-[#CCD6B8]">Height</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-[#ffffff] font-bold">17.1</span>
+<span class="font-label-sm text-label-sm text-[#CCD6B8]">meters</span>
+</div>
+</div>
+<div class="bg-[#2B3117] p-2.5 rounded-lg border border-[#404A24]">
+<span class="font-label-sm text-label-sm text-[#CCD6B8]">Diameter (DBH)</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-[#ffffff] font-bold">43.8</span>
+<span class="font-label-sm text-label-sm text-[#CCD6B8]">cm</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-[#CCD6B8] pt-1">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-[#C4D296]"></span>
+<span class="font-label-sm text-label-sm text-[#C4D296] font-semibold">Baseline Audited</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#CCD6B8]">Conservation Team Lead</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Ergonomic Field Action CTA -->
+<div class="sticky bottom-20 z-40 px-margin-mobile pt-space-xs pb-space-sm">
+<button class="w-full h-12 bg-[#C4D296] hover:bg-[#d6e3ab] text-[#20260E] rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.45)] flex items-center justify-center gap-space-sm active:scale-[0.98] transition-transform focus:outline-none ring-2 ring-[#d6e3ab]/60 font-bold" type="button">
+<span class="material-symbols-outlined text-[20px] text-[#20260E]">straighten</span>
+<span class="font-label-lg text-label-lg font-bold tracking-wide">+ Record Measurement Entry</span>
+</button>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for timeframe filter chips
+  document.querySelectorAll('#timeline-filters .filter-chip').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('#timeline-filters .filter-chip').forEach(b => {
+        b.className = 'filter-chip px-space-md py-2 rounded-full font-label-md text-label-md bg-[#333A1B] text-[#CCD6B8] border border-[#485327] shadow-sm whitespace-nowrap active:scale-95 transition-all';
+      });
+      button.className = 'filter-chip px-space-md py-2 rounded-full font-label-md text-label-md bg-[#C4D296] text-[#20260E] shadow-sm whitespace-nowrap active:scale-95 transition-all font-bold';
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#2A3016]/95 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.4)] border-t border-[#434D25]" data-active-classes="text-[#C4D296] font-bold"><div class="h-16 flex items-center justify-around px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-[#CCD6B8] hover:text-[#F1F4E9] transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[24px]">grid_view</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-[#CCD6B8] hover:text-[#F1F4E9] transition-colors" data-path="scan-camera" href="#"><span class="material-symbols-outlined text-[24px]">qr_code_scanner</span><span class="font-label-sm text-label-sm">Scan</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-[#CCD6B8] hover:text-[#F1F4E9] transition-colors" data-path="trees" href="#"><span class="material-symbols-outlined text-[24px]">park</span><span class="font-label-sm text-label-sm">Trees</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 transition-colors text-[#C4D296] font-bold" data-path="growth-logs" href="#"><span class="material-symbols-outlined text-[24px]">query_stats</span><span class="font-label-sm text-label-sm">Logs</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-[#CCD6B8] hover:text-[#F1F4E9] transition-colors" data-path="register-tree" href="#"><span class="material-symbols-outlined text-[24px]">add_circle</span><span class="font-label-sm text-label-sm">Register</span></a></div></nav>
+</body></html>
