@@ -54,6 +54,9 @@ export default function RegisterTreePage() {
         setZones(zoneList);
         if (zoneList.length > 0) {
           setSelectedZone(zoneList[0].name);
+        } else {
+          // If no zones in database yet, automatically reveal the input
+          setShowAddZoneInput(true);
         }
       } catch (err) {
         console.error('[RegisterTree] Failed to load zones:', err);

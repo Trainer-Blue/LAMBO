@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 import { useTrees } from '../../context/TreeContext';
 
 export default function Header({ title = 'Dashboard', subtitle = 'LAMBO V1.0' }) {
+  const navigate = useNavigate();
   const { user, logout, updateProfile } = useAuth();
   const { reminders, toggleReminder, addReminder } = useTrees();
   const [isOnline, setIsOnline] = useState(navigator.onLine);
@@ -260,6 +262,17 @@ export default function Header({ title = 'Dashboard', subtitle = 'LAMBO V1.0' })
                 )}
               </button>
 
+              {/* Campus Map Quick Button */}
+              <button
+                type="button"
+                onClick={() => navigate('/map')}
+                aria-label="Campus Specimen Map"
+                title="Global Campus Specimen Map"
+                className="w-8 h-8 rounded-full flex items-center justify-center text-[#D8DFC8] hover:text-[#A4B566] hover:bg-[#38411F] transition-all"
+              >
+                <span className="material-symbols-outlined text-[19px]">map</span>
+              </button>
+
               {/* Install App Quick Button - ONLY visible if app is NOT installed */}
               {!isInstalled && (
                 <>
@@ -368,6 +381,21 @@ export default function Header({ title = 'Dashboard', subtitle = 'LAMBO V1.0' })
 
                   {/* Dropdown Actions */}
                   <div className="space-y-1 pt-1">
+                    {/* Global Campus Map Button */}
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setShowProfileMenu(false);
+                        navigate('/map');
+                      }}
+                      className="w-full px-3 py-2.5 rounded-xl text-left text-xs font-mono font-medium text-[#D8DFC8] hover:bg-[#30371A] hover:text-[#F0F3E8] transition-colors flex items-center gap-2.5 group"
+                    >
+                      <span className="material-symbols-outlined text-[18px] text-[#A4B566] group-hover:scale-110 transition-transform">
+                        map
+                      </span>
+                      Global Campus Map
+                    </button>
+
                     {/* Edit Profile & Photo Button */}
                     <button
                       type="button"

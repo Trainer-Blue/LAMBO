@@ -1,14 +1,5 @@
 const Zone = require('../models/Zone');
 
-const DEFAULT_ZONES = [
-  'Zone 4B - Forestry Quad & Coastal Reserve',
-  'Zone 4A - Muir Crest Watershed',
-  'Zone 3C - North Ridge Arboretum',
-  'Zone 2E - Agroforestry Nursery',
-  'Zone 1A - Main Academic Oval',
-  'Zone 1B - Botanical Greenhouses',
-];
-
 /**
  * @desc    Get all forest zones / campus sectors
  * @route   GET /api/zones
@@ -16,13 +7,7 @@ const DEFAULT_ZONES = [
  */
 const getZones = async (req, res, next) => {
   try {
-    let zones = await Zone.find().sort({ createdAt: 1 });
-
-    // Seed defaults if empty
-    if (zones.length === 0) {
-      const docs = DEFAULT_ZONES.map((name) => ({ name }));
-      zones = await Zone.insertMany(docs);
-    }
+    const zones = await Zone.find().sort({ name: 1 });
 
     res.status(200).json({
       success: true,

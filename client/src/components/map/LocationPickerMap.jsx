@@ -174,10 +174,18 @@ export default function LocationPickerMap({
           className="w-full h-full"
           style={{ background: '#1D230E' }}
         >
-          {/* CartoDB Voyager tiles (crisp outdoor campus map) */}
+          {/* Map Tile Layer: OpenStreetMap by default (no watermark), or CARTO if API key is provided */}
           <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+            attribution={
+              import.meta.env.VITE_CARTO_API_KEY
+                ? '&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }
+            url={
+              import.meta.env.VITE_CARTO_API_KEY
+                ? `https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?api_key=${import.meta.env.VITE_CARTO_API_KEY}`
+                : (import.meta.env.VITE_MAP_TILE_URL || 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
+            }
           />
 
           <ChangeView center={position} />
