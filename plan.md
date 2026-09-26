@@ -396,12 +396,12 @@ fontFamily: {
 - [x] forest Zone / Campus Sector can be added by students and saved to mongo db where it is fetched and showed as dropdown options
 
 ### Phase 7: Frontend — Tree List & Profile (~2-3 hrs)
-- TreeCard, TreeListPage, TreeProfilePage
-- StageProgressBar, vitals grid, photo archive
+- [x] TreeCard, TreeListPage, TreeProfilePage
+- [x] StageProgressBar, vitals grid, photo archive
 
 ### Phase 8: Frontend — Growth Logs & Charts (~2-3 hrs)
-- GrowthEntryForm, GrowthChart, GrowthTimeline
-- GrowthLogsPage, Export to Excel
+- [x] GrowthEntryForm, GrowthChart, GrowthTimeline
+- [x] GrowthLogsPage, Export to Excel
 
 ### Phase 9: Frontend — QR Scanning (~1-2 hrs)
 - ScanPage with html5-qrcode camera integration

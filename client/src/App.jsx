@@ -32,6 +32,7 @@ export default function App() {
               <Route path="/scan" element={<ScanPage />} />
               <Route path="/trees" element={<TreeListPage />} />
               <Route path="/trees/:id" element={<TreeProfilePage />} />
+              <Route path="/trees/:id/logs" element={<GrowthLogsPage />} />
               <Route path="/logs" element={<GrowthLogsPage />} />
               <Route path="/register-tree" element={<RegisterTreePage />} />
               <Route path="/map" element={<CampusMapPage />} />
